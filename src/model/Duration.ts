@@ -1,3 +1,5 @@
+export const WEEKS_PER_MONTH: number = +(365 / 7 / 12).toFixed(1);
+
 export enum DurationUnit {
     SECONDS = "seconds",
     MINUTES = "minutes",
@@ -32,7 +34,7 @@ export class Duration {
         }
         // Hours
         else if (hours < workHoursPerDay) {
-            value = Math.ceil(hours)
+            value = +(hours).toFixed(1)
             unit = DurationUnit.HOURS;
         }
         // Days, months or years
