@@ -21,13 +21,16 @@ $: {
 
 </script>
 
-{#if showResults === true}
-<h2>Results</h2>
+<div class="results">
 
-    {#if result.valid}
-        <p>For you, that {userInfo.thingName} is worth {result.value} {result.unit} of work.</p>
-        <p>You earn ${hourlyIncome} per hour</p>
-    {:else}
-        <p>Unable to calculate the results. Please review the information you provided.</p>
+    {#if showResults === true}
+        <h2>Results</h2>
+        
+        {#if result.valid}
+            <p>For you, that {userInfo.thingName} is worth {result.value} {result.unit} of work.</p>
+            <p>You earn ${hourlyIncome} per hour</p>
+        {:else}
+            <p>Unable to calculate the results. Please review the information you provided.</p>
+        {/if}
     {/if}
-{/if}
+</div>

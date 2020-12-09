@@ -6,12 +6,15 @@ import Results from "./components/Results.svelte";
 let userInfo: UserInfo = new UserInfo();
 </script>
 
-<h1>How long do you need to work to afford that <input bind:value={userInfo.thingName} />?</h1>
+<div class="app">
 
-<FormInfo bind:userInfo={userInfo} />
-
-<Results {userInfo} />
-
-<p>
-	<a href="https://github.com/vianneyfaivre/timost">Built with Svelte and Typescript</a>
-</p>
+	<h1>How long do you need to work to afford that <input bind:value={userInfo.thingName} />?</h1>
+	
+	<FormInfo bind:userInfo={userInfo} />
+	
+	<Results {userInfo} />
+	
+	<p>
+		<a href="https://github.com/vianneyfaivre/timost">Built with Svelte and Typescript</a>
+	</p>
+</div>
