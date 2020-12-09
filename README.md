@@ -2,13 +2,9 @@
 
 Quickly find how long you need to work to afford a $$$ thing.
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+## Motivation
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+Try Svelte 3
 
 ## Get started
 
