@@ -3,7 +3,7 @@ import { Duration, DurationUnit } from "./model/Duration";
 
 const WORK_HOURS_PER_WEEK: number = 37.5;
 const WORK_DAYS_PER_WEEK: number = 5;
-const WEEKS_PER_MONTH: number = 4;
+const WEEKS_PER_MONTH: number = +(365 / 7 / 12).toFixed(1);
 
 const WORK_HOURS_PER_MONTH: number = WORK_HOURS_PER_WEEK * WEEKS_PER_MONTH;
 const WORK_HOURS_PER_DAY: number = WORK_HOURS_PER_WEEK / WORK_DAYS_PER_WEEK;
@@ -35,6 +35,8 @@ input[type=number] {
 </style>
 
 <h1>How long do you need to work to afford that {thingName}?</h1>
+
+<h2>Your information</h2>
 <p>
 	<label for=monthlyIncome>What is your monthly net income?</label>
 	<input name=monthlyIncome bind:value={monthlyIncome} type=number min=1 step=100 /> $
@@ -61,3 +63,7 @@ input[type=number] {
 	<li>You work {WORK_HOURS_PER_DAY} hours per day, {WORK_DAYS_PER_WEEK} days a week so that's {WORK_HOURS_PER_WEEK} hours per week</li> 
 	<li>There are {WEEKS_PER_MONTH} weeks in a month</li>
 </ul> 
+
+<p>
+	<a href="https://github.com/vianneyfaivre/timost">Built with Svelte and Typescript</a>
+</p>
