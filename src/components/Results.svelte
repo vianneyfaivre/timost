@@ -9,7 +9,7 @@ let hourlyIncome: number;
 let showResults: boolean = false;
 
 $: {
-    const WORK_HOURS_PER_MONTH: number = userInfo.dailyWorkHours * 7 * WEEKS_PER_MONTH;
+    const WORK_HOURS_PER_MONTH: number = userInfo.dailyWorkHours * userInfo.weeklyWorkDays * WEEKS_PER_MONTH;
 
     hourlyIncome = +(userInfo.monthlyIncome / WORK_HOURS_PER_MONTH).toFixed(2);
     
